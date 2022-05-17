@@ -1,0 +1,192 @@
+﻿<Window x:Class="BankHub_6._7.SignInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankHub_6._7"
+        mc:Ignorable="d"
+        Title="SignInWindow"
+        Height="320"
+        Width="350"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Loaded="SignInWindow_OnLoaded">
+
+    <Window.Resources>
+
+        <Style x:Key="BorderStyle"
+               TargetType="Border">
+            <Setter Property="CornerRadius"
+                    Value="10" />
+            <Setter Property="BorderBrush"
+                    Value="Gray" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="Margin"
+                    Value="10 0 10 0 " />
+            <Setter Property="Padding"
+                    Value="5" />
+        </Style>
+
+        <Style x:Key="TextBoxStyle"
+               TargetType="TextBox">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+
+            <Setter Property="FontSize"
+                    Value="15" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="CaretBrush"
+                    Value="Black" />
+            <Setter Property="SelectionBrush"
+                    Value="#FFD70F00" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+
+        </Style>
+
+        <Style x:Key="TextBLockStyle"
+               TargetType="TextBlock">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="FontSize"
+                    Value="16" />
+            <Setter Property="Padding"
+                    Value="12 0 0 0" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="FontWeight"
+                    Value="Light" />
+            <Setter Property="FontFamily"
+                    Value="Calibri" />
+        </Style>
+
+
+        <Style x:Key="TextBLockSErrortyle"
+               TargetType="TextBlock">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="FontSize"
+                    Value="12" />
+            <Setter Property="Padding"
+                    Value="12 0 0 0" />
+            <Setter Property="Foreground"
+                    Value="#FFFF1123" />
+            <Setter Property="FontWeight"
+                    Value="Light" />
+            <Setter Property="FontFamily"
+                    Value="Calibri" />
+        </Style>
+
+
+        <Style x:Key="PasswordBoxStyle"
+               TargetType="PasswordBox">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="FontSize"
+                    Value="15" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="CaretBrush"
+                    Value="Black" />
+            <Setter Property="SelectionBrush"
+                    Value="#FFD70F00" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+
+        </Style>
+    </Window.Resources>
+
+    <Border Padding="10"
+            Background="#FF282828"
+            CornerRadius="25">
+
+        <Grid>
+            <StackPanel>
+                <Image Source="Image\SmallImageLogo.png"
+                       Width="50"
+                       Height="50" />
+
+                <TextBlock Text="Sign In"
+                           FontSize="30"
+                           FontFamily="Calibri"
+                           FontWeight="Regular"
+                           Foreground="AliceBlue" />
+
+                <StackPanel Margin="0 10 0 0">
+                    <TextBlock Text="Mail or phone number"
+                               Style="{StaticResource TextBLockStyle}" />
+
+                    <TextBlock Name="LoginError"
+                               Style="{StaticResource TextBLockSErrortyle}" />
+
+                    <Border Style="{StaticResource BorderStyle}">
+
+                        <TextBox PreviewTextInput="TextBox_PreviewTextInput"
+                                 PreviewKeyDown="TextBox_PreviewKeyDown"
+                                 Name="LoginTextbox"
+                                 Style="{StaticResource TextBoxStyle}" />
+
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Margin="0 20 0 0">
+                    <TextBlock Text="Password"
+                               Style="{StaticResource TextBLockStyle}" />
+                    <TextBlock Name="PasswordError"
+                               Style="{StaticResource TextBLockSErrortyle}" />
+
+                    <Border Name="PasswordBorder"
+                            Style="{StaticResource BorderStyle}">
+
+                        <PasswordBox PreviewTextInput="Password_TextBox_PreviewTextInput"
+                                     PreviewKeyDown="TextBox_PreviewKeyDown"
+                                     Name="PasswordTextbox"
+                                     Style="{StaticResource PasswordBoxStyle}" />
+                    </Border>
+
+                </StackPanel>
+
+
+                <Grid Margin=" 5 20 5  15"
+                      VerticalAlignment="Bottom"
+                      Width="{Binding ActualWidth, ElementName=PasswordBorder }">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            Width="85"
+                            HorizontalAlignment="Left"
+                            Content="Exit"
+                            Background="#FF1E1E1E"
+                            BorderThickness="0"
+                            IsCancel="True"
+                            Cursor="Hand" />
+
+                    <Button Grid.Column="1"
+                            Width="85"
+                            Name="Button_SIngInClicks"
+                            HorizontalAlignment="Right"
+                            Background="#FF1E1E1E"
+                            BorderThickness="0"
+                            Content="Sign In"
+                            Click="Button_SIngInClick"
+                            IsDefault="true" />
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+
+    </Border>
+</Window>

@@ -1,0 +1,189 @@
+﻿<Window x:Class="BankHub_6._7.UserRedactAccWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="UserRedactAccWindow"
+        Name="Main"
+        Height="340" Width="600" WindowStyle="None" Background="Transparent" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" AllowsTransparency="True">
+
+    <Window.Resources>
+
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="FontWeight" Value="Regular" />
+            <Setter Property="Foreground" Value="AliceBlue" />
+            <Setter Property="Padding" Value="10 0 0 0 " />
+        </Style>
+    </Window.Resources>
+
+    <Border Background="#FF282828"
+            CornerRadius="25">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="55" Height="0.2*" />
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                  x:Name="Header">
+
+
+                <Image
+                    Grid.Column="0"
+                       Source="Image\SmallImageLogo.png"
+                    MaxWidth="250"
+                    MinWidth="200"
+                    Height="{Binding ActualHeight, ElementName=Header, Mode=OneWay}"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center" />
+
+
+            </Grid>
+
+            <Grid Grid.Row="1"
+                  Name="MainGrid">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+                    <Border
+                        Name="UserImage"
+                        Grid.Column="0"
+                        VerticalAlignment="Top"
+                        Margin="20"
+                        Height="150"
+                        Width="150"
+                        CornerRadius="100">
+
+
+                        <Border.Background
+                            >
+                            <ImageBrush ImageSource="Image\UserAvatar.png"
+                                Stretch="UniformToFill" />
+                        </Border.Background>
+
+
+                    </Border>
+                
+
+                <Grid
+                    Margin="10"
+                    Grid.Column="1">
+                    <StackPanel>
+
+                        <StackPanel
+                            Margin="0 10 0 10">
+                            <TextBlock
+                                Text="Name"
+                                FontSize="18"
+                                Style="{StaticResource TextBlockStyle}" />
+                            <TextBlock
+
+                                Name="NameTextBlock"
+                                FontSize="15"
+                                Style="{StaticResource TextBlockStyle}" />
+                        </StackPanel>
+                        <StackPanel
+                            Margin="0 10 0 10">
+                            <TextBlock
+                                Text="Sername"
+                                FontSize="18"
+                                Style="{StaticResource TextBlockStyle}" />
+                            <TextBlock
+                                Name="LastNameTextBlock"
+                                FontSize="15"
+                                Style="{StaticResource TextBlockStyle}" />
+                        </StackPanel>
+                        <StackPanel
+                            Margin="0 10 0 10">
+                            <TextBlock
+                                Text="Mail"
+                                FontSize="18"
+                                Style="{StaticResource TextBlockStyle}" />
+                            <TextBlock
+                                Name="MailTextBlock"
+                                FontSize="15"
+                                Style="{StaticResource TextBlockStyle}" />
+                        </StackPanel>
+
+                        <StackPanel
+                            Margin="0 20 0 20">
+                            <TextBlock
+                                Text="Phone number"
+                                FontSize="18"
+                                Style="{StaticResource TextBlockStyle}" />
+                            <TextBlock
+                                Name="PhoneTextBlock"
+                                FontSize="15"
+                                Style="{StaticResource TextBlockStyle}" />
+                        </StackPanel>
+
+                    </StackPanel>
+                </Grid>
+
+                <Grid
+                    Margin="10 0 10 20"
+                    Grid.Column="2">
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                       
+                    </Grid.RowDefinitions>
+
+                    <Button
+                        Grid.Row="0"
+                        Background="#FF1E1E1E"
+                    Name="ChengeDataButton"
+                        BorderThickness="0"
+                        Margin="10"
+                        Content="Change data" Click="Button_ClickChangeData" />
+                    <Button
+                        Grid.Row="1"
+ Name="ChengePasswordButton"
+                        Background="#FF1E1E1E"
+                        BorderThickness="0"
+                        Margin="10"
+                        Content="Change password"
+                        Click="Button_ClickChangePassword" />
+
+                    <Button
+
+                        Grid.Row="2"
+                        Background="#FF1E1E1E"
+Name="Button_BackToMenu"
+                        BorderThickness="0"
+                        Margin="10"
+                        Content="Exit"
+                        Click="Button_BackToMenuClick" />
+
+                    <Button
+                        Grid.Row="3"
+Name="BackButton"
+                        Background="#FF1E1E1E"
+                        BorderThickness="0"
+                        Margin="10"
+                        Content="Back"
+                        IsCancel="True" />
+
+                </Grid>
+            </Grid>
+
+
+        </Grid>
+    </Border>
+</Window>

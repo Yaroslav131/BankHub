@@ -1,0 +1,252 @@
+﻿<Window x:Class="BankHub_6._7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankHub_6._7"
+      
+        mc:Ignorable="d"
+        Title="BankHub"
+        MinWidth="960"
+        MinHeight="540"
+        MaxHeight="1080"
+        MaxWidth="1920"
+        WindowState="Maximized"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Padding"
+                    Value="15 0 0 0" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="Background"
+                    Value="#00FAFAFA" />
+        </Style>
+
+        <Style x:Key="BlockBorder"
+               TargetType="Border">
+            <Setter Property="Background"
+                    Value="White" />
+            <Setter Property="BorderBrush"
+                    Value="White" />
+            <Setter Property="Opacity"
+                    Value="0.5" />
+        </Style>
+
+        <Style x:Key="DropButt"
+               TargetType="Button">
+            <Setter Property="Background"
+                    Value="#FF1E1E1E" />
+            <Setter Property="Width"
+                    Value="100" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="BorderBrush"
+                    Value="#FF1D1D1D" />
+        </Style>
+
+        <Style x:Key="BlockGrid"
+               TargetType="Grid">
+            <Setter Property="Margin"
+                    Value="15 " />
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF111111">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="60"
+                           Height="2*" />
+            <RowDefinition />
+            <RowDefinition MaxHeight="20" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              x:Name="Header">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Background="GhostWhite"
+                    Opacity="0.1" />
+
+            <Image Grid.Column="0"
+                   Margin="10 5 0 5"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Source="Image/ShotTiteleLogo.png" />
+
+            <local:DropDownButton  Grid.Column="1"
+                                   HorizontalAlignment="Right"
+                                   BorderThickness="0"
+                                   Height="{Binding ActualHeight, ElementName=LogoButton, Mode=OneWay}"
+                                   Width="{Binding ActualHeight, ElementName=DropDownButtonUser}"
+                                   Cursor="Hand"
+                                   x:Name="DropDownButtonUser"
+                                   >
+
+                <local:DropDownButton.Background>
+                    <ImageBrush ImageSource="/Image/UserAvatar.png" />
+                    </local:DropDownButton.Background>
+
+
+
+                    <local:DropDownButton.Menu>
+                    <ContextMenu>
+                        <MenuItem   Header="Sign In"
+                                    Click="SignIn_OnClick"
+                                   
+                                    Name="SignInButton"
+                                   />
+                        <MenuItem     Header="Sign Up"
+                                    
+                                      Click="SignUp_OnClick"
+                                      Name="SignUpButton" />
+                        
+                        <MenuItem     Header="Exit"
+                                      Click="Button_GoOutClick"
+                                      />
+                    </ContextMenu>
+                </local:DropDownButton.Menu>
+            </local:DropDownButton>
+          
+
+            <!--<xctk:DropDownButton x:Name="DropDownButtonUser"
+                                 Grid.Column="1"
+                                 HorizontalAlignment="Right"
+                                 BorderThickness="0"
+                                 Height="{Binding ActualHeight, ElementName=LogoButton, Mode=OneWay}"
+                                 Width="{Binding ActualHeight, ElementName=DropDownButtonUser}"
+                                 Cursor="Hand">
+
+                <xctk:DropDownButton.Background>
+                    <ImageBrush ImageSource="D:\BankHub_6.0\BankHub_6.0\Image\UserAvatar.png " />
+                </xctk:DropDownButton.Background>
+
+                <xctk:DropDownButton.DropDownContent>
+                    <Border Background="#FF1D1D1D">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Button Grid.Row="0"
+                                    Content="Sign In"
+                                    Click="SignIn_OnClick"
+                                    Background="#FF1E1E1E"
+                                    Width="100"
+                                    Name="SignInButton"
+                                    BorderThickness="1"
+                                    BorderBrush="#FF1D1D1D" />
+
+                            <Button Name="SignUpButton"
+                                    Grid.Row="1"
+                                    Content="Sign Up"
+                                    Background="#FF1E1E1E"
+                                    Width="100"
+                                    BorderThickness="1"
+                                    BorderBrush="#FF1D1D1D"
+                                    Click="SignUp_OnClick" />
+
+                            <Button Grid.Row="2"
+                                    Content="Exit"
+                                    Click="Button_GoOutClick"
+                                    Background="#FF1E1E1E"
+                                    Width="100"
+                                    BorderThickness="1"
+                                    BorderBrush="#FF1D1D1D" />
+
+                        </Grid>
+
+                    </Border>
+                </xctk:DropDownButton.DropDownContent>
+
+            </xctk:DropDownButton>-->
+
+        </Grid>
+
+        <Grid x:Name="MainContent"
+              Grid.Row="1">
+
+            <Grid.Background>
+                <ImageBrush ImageSource="D:\BankHub_6.0\BankHub_6.0\Image\MainWindowBackground.jpg" />
+            </Grid.Background>
+
+            <Border Padding="20">
+
+                <Grid Name="ContentGrid">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0"
+                          Grid.Row="0">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="0.8*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid x:Name="FirstBlock"
+                              Grid.Row="0"
+                              Style="{StaticResource BlockGrid}">
+
+                            <Border Style="{StaticResource BlockBorder}"
+                                    Background="#FF282828" />
+
+                            <!--<WebBrowser x:Name="RatesBrowser"
+                                        LoadCompleted="Browser_OnLoadCompleted"
+                                        Source="https://www.exchange-rates.org/"
+                                        VerticalAlignment="Stretch" />-->
+
+                        </Grid>
+
+                        <Grid x:Name="FoursBlock"
+                              Grid.Row="1"
+                              Style="{StaticResource BlockGrid}">
+
+                            <Grid.Background>
+                                <ImageBrush ImageSource="Image/info-panel.jpg" />
+                            </Grid.Background>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Column="1"
+                          Style="{StaticResource BlockGrid}"
+                          x:Name="RightTopBlock">
+
+                        <!--<WebBrowser x:Name="NewsBrowser"
+                                    LoadCompleted="Browser_OnLoadCompleted"
+                                    Source="https://www.bbc.com/news/business/economy"
+                                    VerticalAlignment="Stretch" />-->
+                    </Grid>
+
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="2"
+              x:Name="Footer">
+            <Border MinHeight="30"
+                    Background="GhostWhite"
+                    Opacity="0.1" />
+
+            <TextBlock FontFamily="Calibri"
+                       FontWeight="Thin"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       FontSize="15"
+                       Opacity="0.8"
+                       Text="Developed by DeadLine Group. All rights reserved." />
+        </Grid>
+    </Grid>
+</Window>

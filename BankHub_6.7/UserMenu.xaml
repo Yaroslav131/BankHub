@@ -1,0 +1,373 @@
+﻿<Window x:Class="BankHub_6._7.UserMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankHub_6._7"
+        mc:Ignorable="d"
+        Title="UserMenu"
+        MinWidth="960"
+        MinHeight="540"
+        MaxHeight="1080"
+        MaxWidth="1920"
+        Width="933.6"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+
+    <Window.Resources>
+
+  
+        <ControlTemplate x:Key="NoMouseOverButtonTemplate"
+                         TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Background"
+                            Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"
+                            Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="NoMouseOverDropButtonTemplate"
+                         TargetType="local:DropDownButton">
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Background"
+                            Value="{x:Static SystemColors.ControlLightBrush}" />
+                    <Setter Property="Foreground"
+                            Value="{x:Static SystemColors.GrayTextBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style x:Key="WhiteTextStyle2"
+               TargetType="TextBlock">
+            <Setter Property="Foreground"
+                    Value="White"></Setter>
+            <Setter Property="FontSize"
+                    Value="16"></Setter>
+            <Setter Property="FontFamily"
+                    Value="Calibri"></Setter>
+        </Style>
+
+        <Style x:Key="ChooseButton"
+               TargetType="MenuItem">
+            <Setter Property="Background"
+                    Value="#FF282828"></Setter>
+            <Setter Property="BorderBrush"
+                    Value="Black"></Setter>
+            <Setter Property="Foreground"
+                    Value="White"></Setter>
+            <Setter Property="BorderThickness"
+                    Value="1"></Setter>
+            <Setter Property="FontSize"
+                    Value="16"></Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid HorizontalAlignment="Stretch"
+          Background="#FF111111">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="60"
+                           Height="0.2*" />
+            <RowDefinition />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              x:Name="Header"
+              Background="#FF282828">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="#FF1D1D1D"
+                    BorderThickness="0.5"
+                    Name="LogoBorder"
+                    >
+
+                <Image Margin="10 5 10 5"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Source="Image\ShottiteleLogo.png"
+                       Name="logo" />
+            </Border>
+
+            <local:DropDownButton Grid.Column="1"
+                                  x:Name="AccountButton"
+                                  Content="Accounts"
+                                  Height="{Binding ActualHeight, ElementName=LogoButton, Mode=OneWay}"
+                                  Background="#FF282828"
+                                  Foreground="White"
+                                  BorderBrush="#FF1D1D1D"
+                                  Cursor="Hand"
+                                  FontSize="16"
+                                  Template="{StaticResource NoMouseOverDropButtonTemplate}">
+                <local:DropDownButton.Menu>
+                    <ContextMenu>
+                        <MenuItem   Header="Add Account"
+                                    Name="AddAccButton"
+                                    Click="AddAccClick"
+                                  />
+                        <MenuItem     Header="Delete account "
+                                      Name="DeleteAccButton"
+                                      Click="DeleteAccClick"
+                                      />
+                        <MenuItem    Header="Accounts list "
+                                     Name="ShowListAccCButton"
+                                     Click="ShowListAccClick"
+                                    />
+                        <MenuItem 
+                                  Header="Cedit accounts list"
+                                     Name="CreditListButton"
+                                     Click="CreditListClicK" />
+                    </ContextMenu>
+                </local:DropDownButton.Menu>
+            </local:DropDownButton>
+
+            <local:DropDownButton Grid.Column="2"
+                                  x:Name="CardButton"
+                                  Content="Cards"
+                                  Height="{Binding ActualHeight, ElementName=LogoButton, Mode=OneWay}"
+                                  Background="#FF282828"
+                                  Foreground="White"
+                                  BorderBrush="#FF1D1D1D"
+                                  Cursor="Hand"
+                                  FontSize="16"
+                                  Template="{StaticResource NoMouseOverDropButtonTemplate}">
+                <local:DropDownButton.Menu>
+                    <ContextMenu>
+                        <MenuItem   Header="Add Card"
+                                    Name="AddCardButton"
+                                    Click="AddCardClick"
+                                  />
+                        
+                        <MenuItem     Header="Delete Card "
+                                      Name="DeleteCardButton"
+                                      Click="DeleteCardClick"
+                                       />
+                              
+                        <MenuItem Header="Cards list "
+                                  Name="ShowCardListButton"
+                                     Click="ShowListCardClick"
+                                   />
+                    </ContextMenu>
+                </local:DropDownButton.Menu>
+            </local:DropDownButton>
+
+            <local:DropDownButton Grid.Column="3"
+                                  x:Name="OpeationsButton"
+                                  Content="Operations"
+                                  Height="{Binding ActualHeight, ElementName=LogoButton, Mode=OneWay}"
+                                  Background="#FF282828"
+                                  Foreground="White"
+                                  BorderBrush="#FF1D1D1D"
+                                  Cursor="Hand"
+                                  FontSize="16"
+                                  Template="{StaticResource NoMouseOverDropButtonTemplate}">
+                <local:DropDownButton.Menu>
+                    <ContextMenu>
+                        <MenuItem   Header="Add money to account"
+                                    Name="AddMoneyButton"
+                                    Click="AddMoneyClick"
+                                    Width="{Binding ActualHeight, ElementName=OpeationsButton, Mode=OneWay}" />
+
+                        <MenuItem     Header="Get money from account"
+                                      Click="GetMoneyClick"
+                                      Name="GetMoneyButton"
+                                      Width="{Binding ActualHeight, ElementName=OpeationsButton, Mode=OneWay}" />
+
+                        <local:DropDownButton 
+                                              x:Name="TransitButton"
+                                              Content="Transit Money"
+                                              Width="{Binding ActualHeight, ElementName=GetMoneyButton, Mode=OneWay}"
+                                              Height="{Binding ActualHeight, ElementName=GetMoneyButton, Mode=OneWay}"
+                                              Cursor="Hand"
+                                              Background="{Binding ActualHeight, ElementName=GetMoneyButton, Mode=OneWay}"
+                                              BorderThickness="0"
+                                              Foreground="{Binding ActualHeight, ElementName=GetMoneyButton, Mode=OneWay}"
+                                              FontFamily="{Binding ActualHeight, ElementName=GetMoneyButton, Mode=OneWay}"
+                                              FontWeight="{Binding ActualHeight, ElementName=GetMoneyButton, Mode=OneWay}"
+                                              Template="{StaticResource NoMouseOverDropButtonTemplate}">
+                            
+                            
+                            <local:DropDownButton.Menu>
+                                <ContextMenu>
+                                    <MenuItem   Header="Transit to account"
+                                                Name="TransitInButton"
+                                                Click="TransitMoneyClick" />
+
+                                    <MenuItem     Header="Transit to other account"
+                                                  Name="TransitOtherButton"
+                                                  Click="TransitOtherMoneyClick" />
+
+
+
+                                </ContextMenu>
+                            </local:DropDownButton.Menu>
+                            
+                        </local:DropDownButton>
+                        <MenuItem    Header="Get credit"
+                                     Name="GetCreditButton"
+                                     Click="GetCreditClick"
+                                     Width="{Binding ActualHeight,
+                            ElementName=OpeationsButton, Mode=OneWay}" />
+                        <MenuItem    Header="Pay credit"
+                                     Name="PayCreditButton"
+                                     Click="PayCredit"  
+                                     Width="{Binding ActualHeight,
+                            ElementName=OpeationsButton, Mode=OneWay}" />
+                        <MenuItem    Header="Last Operation"
+                                     Name="LastOperationButton"
+                                     Click="LastOperation"
+                                     Width="{Binding ActualHeight,
+                            ElementName=OpeationsButton, Mode=OneWay}" />
+                    </ContextMenu>
+                </local:DropDownButton.Menu>
+            </local:DropDownButton>
+
+            <Button Grid.Column="4"
+                    Name="News"
+                    Click="NewsClick"
+                    Height="{Binding ActualHeight, ElementName=LogoBorder, Mode=OneWay}"
+                    Template="{StaticResource NoMouseOverButtonTemplate}"
+                    Background="#FF282828"
+                    Foreground="White"
+                    BorderBrush="#FF1D1D1D"
+                    FontSize="16">
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Text="News"
+                               Style="{StaticResource WhiteTextStyle2}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="10" />
+
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="5"
+                    Name="Map"
+                    Click="MapClick"
+                    Height="{Binding ActualHeight, ElementName=LogoBorder, Mode=OneWay}"
+                    Template="{StaticResource NoMouseOverButtonTemplate}"
+                    Background="#FF282828"
+                    BorderBrush="#FF1D1D1D"
+                    Foreground="White"
+                    FontSize="16">
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Text="Map"
+                               Style="{StaticResource WhiteTextStyle2}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="10" />
+
+
+                </StackPanel>
+
+            </Button>
+
+            <Button Grid.Column="6"
+                    Name="InfoUser"
+                    Click="User_OnClick"
+                    Height="{Binding ActualHeight, ElementName=LogoBorder, Mode=OneWay}"
+                    Background="#FF282828"
+                    BorderBrush="#FF1D1D1D"
+                    Template="{StaticResource NoMouseOverButtonTemplate}">
+                <StackPanel Orientation="Horizontal"
+                            Height="{Binding ActualHeight, ElementName=LogoBorder, Mode=OneWay}">
+
+                    <TextBlock Loaded="UserName_OnLoaded"
+                               Name="UserName"
+                               Style="{StaticResource WhiteTextStyle2}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="10" />
+
+                    <Border Margin="5 0 5 0"
+                            Name="UserImage"
+                            HorizontalAlignment="Center"
+                            Height="{Binding ActualHeight, ElementName=logo}"
+                            Width="{Binding ActualHeight, ElementName=UserImage}"
+                            CornerRadius="100">
+
+
+                        <Border.Background>
+                            <ImageBrush ImageSource="Image/UserAvatar.png"
+                                        Stretch="UniformToFill" />
+                        </Border.Background>
+
+
+                    </Border>
+
+                </StackPanel>
+
+            </Button>
+
+        </Grid>
+
+        <Grid x:Name="MainContent"
+              Grid.Row="1">
+
+            <Grid.Background>
+                <ImageBrush ImageSource="Image\MainWindowBackground.jpg" />
+            </Grid.Background>
+
+            <Border Padding="20">
+
+
+            </Border>
+
+        </Grid>
+
+        <Grid Grid.Row="2"
+              x:Name="Footer">
+            <Border MinHeight="30"
+                    Background="GhostWhite"
+                    Opacity="0.1" />
+
+            <TextBlock FontFamily="Calibri"
+                       FontWeight="Thin"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       FontSize="15"
+                       Opacity="0.8"
+                       Text="Developed by DeadLine Group. All rights reserved." />
+        </Grid>
+
+
+
+    </Grid>
+
+
+
+
+</Window>

@@ -1,0 +1,130 @@
+﻿<Window x:Class="BankHub_6._7.CardListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankHub_6._7"
+        mc:Ignorable="d"
+        Title="CardListWindow"
+        Height="500"
+        Width="1100"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+
+        <Style x:Key="TextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="FontFamily"
+                    Value="Calibri"></Setter>
+            <Setter Property="FontWeight"
+                    Value="Regular"></Setter>
+            <Setter Property="Foreground"
+                    Value="AliceBlue"></Setter>
+        </Style>
+
+
+        <Style x:Key="DStyle"
+               TargetType="DataGrid">
+
+
+        </Style>
+
+
+
+
+    </Window.Resources>
+
+    <Border Background="#FF282828"
+            CornerRadius="25">
+
+
+        <Grid>
+
+
+            <Border Padding="10"
+                    Grid.ColumnSpan="2">
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="Image/SmallImagelogo.png"
+                           Width="50"
+                           Height="50"></Image>
+                    <TextBlock Grid.Row="1"
+                               Text="Cards list"
+                               FontSize="30"
+                               Style="{StaticResource TextBlockStyle}" />
+
+                    <Grid Grid.Row="2"
+                          Margin="15">
+
+
+
+
+                        <DataGrid x:Name="CardsGrid"
+                                  Loaded="CardsGrid_OnLoaded"
+                                  ColumnWidth="*"
+                                  Background="#FF424242"
+                                  Foreground="White"
+                                  FontSize="16"
+                                  IsReadOnly="True">
+
+                        </DataGrid>
+
+
+                    </Grid>
+
+
+                    <Grid Grid.Row="3"
+                          Margin=" 15 20 15  20"
+                          VerticalAlignment="Bottom">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0"
+                                Width="85"
+                                HorizontalAlignment="Left"
+                                Content="Exit"
+                                Background="#FF1E1E1E"
+                                BorderThickness="0"
+                                IsCancel="True"
+                                IsDefault="true" />
+
+                        <Button x:Name="ShowPassword"
+                                Grid.Column="1"
+                                Width="120"
+                                FontSize="12"
+                                HorizontalAlignment="Right"
+                                Content="Show password"
+                                Background="#FF1E1E1E"
+                                BorderThickness="0"
+                                Click="ButtonBase_OnClick"
+                                Margin="0,0,-0.4,0"
+                                VerticalAlignment="Top" />
+
+                    </Grid
+                >
+
+                </Grid>
+
+
+
+
+            </Border>
+
+
+
+        </Grid>
+    </Border>
+</Window>

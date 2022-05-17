@@ -1,0 +1,491 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BankHub_6.7/1.0.0": {
+        "dependencies": {
+          "MaterialDesignColors": "2.0.4",
+          "MaterialDesignThemes": "3.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.2",
+          "Pomelo.EntityFrameworkCore.MySql": "6.0.1",
+          "Syncfusion.Tools.Windows": "19.4.0.53"
+        },
+        "runtime": {
+          "BankHub_6.7.dll": {}
+        }
+      },
+      "MaterialDesignColors/2.0.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {
+            "assemblyVersion": "2.0.4.3",
+            "fileVersion": "2.0.4.3"
+          }
+        }
+      },
+      "MaterialDesignThemes/3.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.0/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/6.0.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.2",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.2",
+          "Microsoft.Extensions.Caching.Memory": "6.0.1",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "System.Collections.Immutable": "6.0.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.222.6404"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.2": {
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "assemblyVersion": "6.0.2.0",
+            "fileVersion": "6.0.222.6404"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/6.0.2": {},
+      "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "assemblyVersion": "6.0.1.0",
+            "fileVersion": "6.0.121.56712"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/6.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.222.6406"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "MySqlConnector/2.1.2": {
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.2.0"
+          }
+        }
+      },
+      "Pomelo.EntityFrameworkCore.MySql/6.0.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.1",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "MySqlConnector": "2.1.2"
+        },
+        "runtime": {
+          "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "assemblyVersion": "6.0.1.0",
+            "fileVersion": "6.0.1.0"
+          }
+        }
+      },
+      "Syncfusion.Grid.Windows/19.4.0.53": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.4.0.53",
+          "Syncfusion.Shared.Base": "19.4.0.53",
+          "Syncfusion.Shared.Windows": "19.4.0.53"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Grid.Windows.dll": {
+            "assemblyVersion": "19.4500.0.53",
+            "fileVersion": "19.4500.0.53"
+          }
+        }
+      },
+      "Syncfusion.Licensing/19.4.0.53": {
+        "runtime": {
+          "lib/net5.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "19.4.0.53",
+            "fileVersion": "19.4.0.53"
+          }
+        }
+      },
+      "Syncfusion.Shared.Base/19.4.0.53": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.4.0.53"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Shared.Base.dll": {
+            "assemblyVersion": "19.4500.0.53",
+            "fileVersion": "19.4500.0.53"
+          }
+        }
+      },
+      "Syncfusion.Shared.Windows/19.4.0.53": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.4.0.53",
+          "Syncfusion.Shared.Base": "19.4.0.53"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Shared.Windows.dll": {
+            "assemblyVersion": "19.4500.0.53",
+            "fileVersion": "19.4500.0.53"
+          }
+        }
+      },
+      "Syncfusion.SpellChecker.Base/19.4.0.53": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.4.0.53"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.SpellChecker.Base.dll": {
+            "assemblyVersion": "19.4500.0.53",
+            "fileVersion": "19.4500.0.53"
+          }
+        }
+      },
+      "Syncfusion.Tools.Base/19.4.0.53": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.4.0.53",
+          "Syncfusion.Shared.Base": "19.4.0.53"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Tools.Base.dll": {
+            "assemblyVersion": "19.4500.0.53",
+            "fileVersion": "19.4500.0.53"
+          }
+        }
+      },
+      "Syncfusion.Tools.Windows/19.4.0.53": {
+        "dependencies": {
+          "Syncfusion.Grid.Windows": "19.4.0.53",
+          "Syncfusion.Licensing": "19.4.0.53",
+          "Syncfusion.Shared.Base": "19.4.0.53",
+          "Syncfusion.Shared.Windows": "19.4.0.53",
+          "Syncfusion.SpellChecker.Base": "19.4.0.53",
+          "Syncfusion.Tools.Base": "19.4.0.53"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Syncfusion.Tools.Windows.dll": {
+            "assemblyVersion": "19.4500.0.53",
+            "fileVersion": "19.4500.0.53"
+          }
+        }
+      },
+      "System.Collections.Immutable/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
+    }
+  },
+  "libraries": {
+    "BankHub_6.7/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MaterialDesignColors/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l8LfghYjT2mBVp28CAU8UN4GQ6T/euzgGiTwFKy1DPUG8c5rng/CVXXqM5Xof0XAm0MhXgV8yjGRjQ7KOjT/Iw==",
+      "path": "materialdesigncolors/2.0.4",
+      "hashPath": "materialdesigncolors.2.0.4.nupkg.sha512"
+    },
+    "MaterialDesignThemes/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X8G+OklkHX8N5HRYf9Z1MLujxaWK/1QaqKZkKlMVBubpo0OhH4g8jpWMcoRGRtPx5F8ebE5VR7EjzuSr4HO+Vg==",
+      "path": "materialdesignthemes/3.0.0",
+      "hashPath": "materialdesignthemes.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hoZtatDA6zL/+gMXXkG3UNsF6iWguC9OkJeYUepqyPEF2mjFajga+DxS4H/UODs7HWo9oNCnhi2Q/BE9T0lg2g==",
+      "path": "microsoft.entityframeworkcore/6.0.2",
+      "hashPath": "microsoft.entityframeworkcore.6.0.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-71hgKvRpMebTp9bKZB86w3uRXQAJzTeksZ4EyO1/OKj/AoL8/8IU31kHHcIFAfX/D0uefl4rO6jWgh3OaR41pQ==",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.2",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pHUMjXPeWqyZS2OfkQsDC1Qdk30JVcPNDUxEVhOTDAJvyUN4EuBFYbnniQ9RLHbWAw8IkEwVAAo6v/ICmT4/dw==",
+      "path": "microsoft.entityframeworkcore.analyzers/6.0.2",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-abaCEEeeB0xlMYDD+m9kmhQh5aipJ5s3UbyQVBfMaZeCiZHXST0eWuJRX63E3e7K/mju5WEHiybV/hizng7q/w==",
+      "path": "microsoft.entityframeworkcore.relational/6.0.1",
+      "hashPath": "microsoft.entityframeworkcore.relational.6.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bcz5sSFJbganH0+YrfvIjJDIcKNW7TL07C4d1eTmXy/wOt52iz4LVogJb6pazs7W0+74j0YpXFErvp++Aq5Bsw==",
+      "path": "microsoft.extensions.caching.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Memory/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B4y+Cev05eMcjf1na0v9gza6GUtahXbtY1JCypIgx3B4Ea/KAgsWyXEmW4q6zMbmTMtKzmPVk09rvFJirvMwTg==",
+      "path": "microsoft.extensions.caching.memory/6.0.1",
+      "hashPath": "microsoft.extensions.caching.memory.6.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qWzV9o+ZRWq+pGm+1dF+R7qTgTYoXvbyowRoBxQJGfqTpqDun2eteerjRQhq5PQ/14S+lqto3Ft4gYaRyl4rdQ==",
+      "path": "microsoft.extensions.configuration.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
+      "path": "microsoft.extensions.dependencyinjection/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg==",
+      "path": "microsoft.extensions.logging/6.0.0",
+      "hashPath": "microsoft.extensions.logging.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dzXN0+V1AyjOe2xcJ86Qbo233KHuLEY0njf/P2Kw8SfJU+d45HNS2ctJdnEnrWbM9Ye2eFgaC5Mj9otRMU6IsQ==",
+      "path": "microsoft.extensions.options/6.0.0",
+      "hashPath": "microsoft.extensions.options.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9+PnzmQFfEFNR9J2aDTfJGGupShHjOuGw4VUv+JB044biSHrnmCIMD+mJHmb2H7YryrfBEXDurxQ47gJZdCKNQ==",
+      "path": "microsoft.extensions.primitives/6.0.0",
+      "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
+    },
+    "MySqlConnector/2.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JVokQTUNN3WHAu9Vw8ieeq1dXTFokJiig5P0VJ4f439UxRrsPo6SaVWC8Zdm6mkPeQFhZ0/9afdWa02EY/1j/w==",
+      "path": "mysqlconnector/2.1.2",
+      "hashPath": "mysqlconnector.2.1.2.nupkg.sha512"
+    },
+    "Pomelo.EntityFrameworkCore.MySql/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sFIo5e9RmQoCTEvH6EeSV8ptmX3dw/6XgyD8R93X/i7A9+XCeG9KTjSNjrszVjVOtCu/eyvYqqcv2uZ/BHhlYA==",
+      "path": "pomelo.entityframeworkcore.mysql/6.0.1",
+      "hashPath": "pomelo.entityframeworkcore.mysql.6.0.1.nupkg.sha512"
+    },
+    "Syncfusion.Grid.Windows/19.4.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MmKdLZr/JGZX+WtHoxUTXu0YJjoDNgUf3bfn07T3lK5z7TZHRsxGSbvoE9UqwWxvqnU5qBAwGUukQmaoU7jVOA==",
+      "path": "syncfusion.grid.windows/19.4.0.53",
+      "hashPath": "syncfusion.grid.windows.19.4.0.53.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/19.4.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V7eVfg0Ohx5/I9OaH3obiYzoyiuiz2Kb40tYOlcJon58Y0Srgp5BFfvIKnmYsuSoIQ6CZX2YR7j0jzFocb1EKg==",
+      "path": "syncfusion.licensing/19.4.0.53",
+      "hashPath": "syncfusion.licensing.19.4.0.53.nupkg.sha512"
+    },
+    "Syncfusion.Shared.Base/19.4.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8pZE7XmKCtpVfCZuLPJa9H2QR4lsVwgwsIMl65JERwu+rzt5CWA/ZnxC/uhTMqqRkrfjvj7xyH1r3p63p1ANhg==",
+      "path": "syncfusion.shared.base/19.4.0.53",
+      "hashPath": "syncfusion.shared.base.19.4.0.53.nupkg.sha512"
+    },
+    "Syncfusion.Shared.Windows/19.4.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q2EZr1iPwD5lObjBBUBBXRB4M4oFhA/El+lpaWqMQaNFjszi6pFui/baa+stij1jLLzNj6pKMvRvIKMdQsMdDg==",
+      "path": "syncfusion.shared.windows/19.4.0.53",
+      "hashPath": "syncfusion.shared.windows.19.4.0.53.nupkg.sha512"
+    },
+    "Syncfusion.SpellChecker.Base/19.4.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F4SVTfvoi5iOYqYK7YsQ3chIapubmQR4Nwaw/1WUofweanVStsZQULCaMNr8N3KYqAAkPdveZInuy/vVXPQFzQ==",
+      "path": "syncfusion.spellchecker.base/19.4.0.53",
+      "hashPath": "syncfusion.spellchecker.base.19.4.0.53.nupkg.sha512"
+    },
+    "Syncfusion.Tools.Base/19.4.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xv3xIK5Nny690wWL+gub61Nu8VGET2bkccMQTumKXzQb1qH2+6QTA192poKFOtqdOpXzeE2KyrsTIc/RIRMJ6g==",
+      "path": "syncfusion.tools.base/19.4.0.53",
+      "hashPath": "syncfusion.tools.base.19.4.0.53.nupkg.sha512"
+    },
+    "Syncfusion.Tools.Windows/19.4.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YFfaNO8eHf87RzAxSubO1NIXknbAPJ8yia7zEXUQF5Y0ryZ6CT32AFlaqsWmEPYyzMa321vIpVz+ZDzAvTzCcg==",
+      "path": "syncfusion.tools.windows/19.4.0.53",
+      "hashPath": "syncfusion.tools.windows.19.4.0.53.nupkg.sha512"
+    },
+    "System.Collections.Immutable/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
+      "path": "system.collections.immutable/6.0.0",
+      "hashPath": "system.collections.immutable.6.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
+      "path": "system.diagnostics.diagnosticsource/6.0.0",
+      "hashPath": "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+﻿<Window x:Class="BankHub_6._7.LastOperation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankHub_6._7"
+        mc:Ignorable="d"
+        Title="LastOperation"
+        Height="500"
+        Width="500"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+
+        <Style x:Key="TextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="FontFamily"
+                    Value="Calibri" />
+            <Setter Property="FontWeight"
+                    Value="Regular" />
+            <Setter Property="Foreground"
+                    Value="AliceBlue" />
+        </Style>
+
+
+    </Window.Resources>
+
+    <Border Background="#FF282828"
+            CornerRadius="25">
+
+
+        <Grid>
+
+
+            <Border Padding="10"
+                    Grid.ColumnSpan="2">
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Source="Image/SmallImageLogo.png"
+                           Width="50"
+                           Height="50" />
+
+                    <TextBlock Grid.Row="1"
+                               Text="Last opetation list"
+                               FontSize="30"
+                               Style="{StaticResource TextBlockStyle}" />
+
+
+
+                    <ListBox x:Name="OperationList"
+                             Margin="15"
+                             Grid.Row="2"
+                             ItemsSource="{Binding}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Type}"
+                                               Foreground="AliceBlue"
+                                               FontWeight="Regular"
+                                               FontFamily="Calibri"
+                                               FontSize="20" />
+                                    <TextBlock Text="{Binding Time}"
+                                               Foreground="AliceBlue"
+                                               FontWeight="Regular"
+                                               FontFamily="Calibri"
+                                               FontSize="16" />
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+
+
+
+                    <Grid Grid.Row="3"
+                          Margin=" 15 20 15  20"
+                          VerticalAlignment="Bottom">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0"
+                                Width="85"
+                                HorizontalAlignment="Left"
+                                Content="Exit"
+                                Background="#FF1E1E1E"
+                                BorderThickness="0"
+                                IsCancel="True"
+                                IsDefault="true" />
+
+
+                        <Button Grid.Column="1"
+                                Width="110"
+                                HorizontalAlignment="Right"
+                                Content="Make report"
+                                Background="#FF1E1E1E"
+                                BorderThickness="0"
+                                Click="ReportClick" />
+                    </Grid>
+
+                </Grid>
+
+
+            </Border>
+
+
+        </Grid>
+    </Border>
+</Window>

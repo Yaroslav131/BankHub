@@ -1,0 +1,165 @@
+﻿<Window x:Class="BankHub_6._7.LoanConditionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankHub_6._7"
+        mc:Ignorable="d"
+        Title="LoanConditionsWindow"
+        Height="380"
+        Width="500"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+
+
+    <Window.Resources>
+
+        <Style x:Key="TextBlockStyle"
+               TargetType="TextBlock">
+            <Setter Property="Padding"
+                    Value="12 0 0 0"></Setter>
+            <Setter Property="FontFamily"
+                    Value="Calibri"></Setter>
+            <Setter Property="FontWeight"
+                    Value="Regular"></Setter>
+            <Setter Property="Foreground"
+                    Value="AliceBlue"></Setter>
+        </Style>
+
+
+        <Style x:Key="BorderStyle"
+               TargetType="Border">
+            <Setter Property="CornerRadius"
+                    Value="10" />
+            <Setter Property="BorderBrush"
+                    Value="Gray" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="Padding"
+                    Value="3"></Setter>
+        </Style>
+
+        <Style x:Key="TextBoxStyle"
+               TargetType="TextBox">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="FontSize"
+                    Value="16" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="CaretBrush"
+                    Value="Black" />
+            <Setter Property="SelectionBrush"
+                    Value="#FFD70F00" />
+            <Setter Property="Background"
+                    Value="Transparent"></Setter>
+
+
+        </Style>
+
+        <Style x:Key="PasswordBoxStyle"
+               TargetType="PasswordBox">
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="FontSize"
+                    Value="16" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="CaretBrush"
+                    Value="Black" />
+            <Setter Property="SelectionBrush"
+                    Value="#FFD70F00" />
+            <Setter Property="Background"
+                    Value="Transparent"></Setter>
+
+
+        </Style>
+
+    </Window.Resources>
+
+    <Border CornerRadius="25"
+            Background="#FF282828">
+        <Grid>
+
+
+            <Border Padding="10">
+
+
+                <StackPanel Name="NumberStackPanel">
+                    <Image Source="Image/SmallImageLogo.png"
+                           Width="50"
+                           Height="50"></Image>
+
+                    <TextBlock Text="Loan Condition"
+                               FontSize="30"
+                               Style="{StaticResource TextBlockStyle}" />
+
+                    <StackPanel Margin="15">
+                        <TextBlock TextWrapping="Wrap"
+                                   FontSize="20"
+                                   Style="{StaticResource TextBlockStyle}"><Run Text="Get acquainted with the terms of the loan. You can borrow for 1 to 120 months (10 years), the amount of the loan is limited to $" /><Run Text=" " /><Run Text="1,000,000. If the loan is not paid, your card will be blocked and you will have to report to the bank for clarification. If you don't show up, we'll have to sue you." /></TextBlock>
+
+
+
+                        <RadioButton  FontSize="16"
+                                      Background="White"
+                                      Foreground="White"
+                                      BorderBrush="White"
+                                      HorizontalAlignment="Left"
+                                      Margin=" 15"
+                                      Content="I accept the terms"
+                                      Name="Accept"
+                                      Click="Accept_OnClick" />
+
+
+                        <Grid Margin="0 15 0 0"
+                              VerticalAlignment="Bottom">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Button Grid.Column="0"
+                                    Width="85"
+                                    HorizontalAlignment="Left"
+                                    Content="Exit"
+                                    Background="#FF1E1E1E"
+                                    BorderThickness="0"
+                                    IsCancel="True" />
+
+                            <Button Name="Continue"
+                                    Click="AcceptClick"
+                                    Grid.Column="1"
+                                    Width="85"
+                                    HorizontalAlignment="Right"
+                                    Background="#FF1E1E1E"
+                                    BorderThickness="0"
+                                    FontSize="12"
+                                    Content="Continue"
+                                    Opacity="0.5" />
+                        </Grid
+                    >
+                    </StackPanel>
+
+
+                </StackPanel>
+
+
+
+
+            </Border>
+
+
+
+        </Grid>
+    </Border>
+</Window>

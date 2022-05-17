@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddAccountWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddCardWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddMoneyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CardListWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChangePasswordWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChangePersonalDataWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CheckPassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreditAccList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DeleteAccWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DeleteCardWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GetCreditWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GetMoneyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LastOperation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoanConditionsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MakeReport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MapWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="NewsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OfferLoan.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OfferLoan2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OutPutSec.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PayCredit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SignInWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SignUpWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TransitMoneyToOhterAccountWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TransitMoneyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserCardBack.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AccountListWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddAccountWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddCardWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddMoneyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CardListWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChangePasswordWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChangePersonalDataWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CheckPassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreditAccList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DeleteAccWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DeleteCardWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GetCreditWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GetMoneyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LastOperation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LoanConditionsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MakeReport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MapWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NewsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OfferLoan.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OfferLoan2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OutPutSec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PayCredit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SignInWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SignUpWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TransitMoneyToOhterAccountWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TransitMoneyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserCardBack.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserRedactAccWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

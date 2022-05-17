@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>BankHub_6._7</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\info-panel.jpg" />
+    <None Remove="Image\MainWindowBackground.jpg" />
+    <None Remove="Image\ShotTiteleLogo.png" />
+    <None Remove="Image\SmallImageLogo.png" />
+    <None Remove="Image\UserAvatar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\MainWindowBackground.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.0.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+    <PackageReference Include="Syncfusion.Tools.Windows" Version="19.4.0.53" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\info-panel.jpg" />
+    <Resource Include="Image\ShotTiteleLogo.png" />
+    <Resource Include="Image\SmallImageLogo.png" />
+    <Resource Include="Image\UserAvatar.png" />
+  </ItemGroup>
+
+</Project>
